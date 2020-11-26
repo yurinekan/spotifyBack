@@ -1,0 +1,224 @@
+{
+  "users": [
+    {
+      "email": "davi@email.com",
+      "password": "$2a$10$ZWvFcVLU9UsLVmf0xRSWQuP4ClH9.PfkpJ9/askrKl1THnmjFHw3m",
+      "nick": "davi",
+      "birthday": "11/Janeiro/1111",
+      "id": 1
+    },
+    {
+      "email": "yure@email.com",
+      "password": "$2a$10$qTsZ0YdL0anRGVzv.7tDduMiFEft3.Yf2BUjdeSsHjHA7m.trLdCu",
+      "nick": "Yure",
+      "birthday": "11/Janeiro/2222",
+      "id": 2
+    },
+    {
+      "email": "pereba@email.com",
+      "password": "$2a$10$BGtAQmf7Tsum6rblhDi77OXToFiiR..K5YNN/n0TocLmi6PjGmzZu",
+      "nick": "pereba",
+      "birthday": "1/Fevereiro/3333",
+      "id": 3
+    },
+    {
+      "email": "joca@email.com",
+      "password": "$2a$10$Lg/OO65lss6geq7sxedyjenVUawr9yV1Iaj4FHzWjtDwNQnnMBLdS",
+      "nick": "jocaa",
+      "birthday": "10/Janeiro/2000",
+      "id": 4
+    }
+  ],
+  "personalPlaylists": [
+    {
+      "name": "Funk",
+      "description": "Playlist de funk",
+      "color": "#ff0000",
+      "music_ids": [
+        4,
+        8,
+        3
+      ],
+      "user_id": "1",
+      "id": 2
+    },
+    {
+      "name": "hgfshfg",
+      "description": "hfgdhfgd",
+      "color": "#218343",
+      "music_ids": [
+        8
+      ],
+      "user_id": "1",
+      "id": 3
+    },
+    {
+      "name": "Trap",
+      "description": "Playlist de trap",
+      "color": "#b0b300",
+      "music_ids": [
+        6,
+        5
+      ],
+      "user_id": "1",
+      "id": 4
+    },
+    {
+      "name": "Peba",
+      "description": "playlist peba",
+      "color": "#0004ff",
+      "music_ids": [
+        5
+      ],
+      "user_id": "3",
+      "id": 5
+    },
+    {
+      "name": "Teste",
+      "description": "playlist teste",
+      "color": "#0011ff",
+      "music_ids": [
+        3,
+        6
+      ],
+      "user_id": "4",
+      "id": 6
+    },
+    {
+      "name": "Funk",
+      "description": "playlist de funk",
+      "color": "#ff0000",
+      "music_ids": [
+        4
+      ],
+      "user_id": "4",
+      "id": 7
+    },
+    {
+      "name": "Teste",
+      "description": "teste",
+      "color": "#1b6f93",
+      "music_ids": [],
+      "user_id": "5",
+      "id": 8
+    }
+  ],
+  "playlists": [
+    {
+      "id": 1,
+      "name": "Black History Is Now",
+      "img": "../../assets/images/image0.png",
+      "musics": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Higher Ground",
+      "img": "../../assets/images/image1.png"
+    },
+    {
+      "id": 3,
+      "name": "Radar",
+      "img": "../../assets/images/image2.png"
+    },
+    {
+      "id": 4,
+      "name": "Samba & Pagode",
+      "img": "../../assets/images/image3.png",
+      "musics": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Bem-estar",
+      "img": "../../assets/images/image4.png"
+    },
+    {
+      "id": 6,
+      "name": "Em Casa",
+      "img": "../../assets/images/image5.png"
+    },
+    {
+      "id": 7,
+      "name": "Brasil",
+      "img": "../../assets/images/image6.png",
+      "musics": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Sertanejo",
+      "img": "../../assets/images/image7.png"
+    },
+    {
+      "id": 9,
+      "name": "Funk",
+      "img": "../../assets/images/image8.png",
+      "musics": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Pop",
+      "img": "../../assets/images/image9.png"
+    }
+  ],
+  "musics": [
+    {
+      "id": 1,
+      "name": "Black Lives Matter",
+      "artist": "Dom M",
+      "path": "../../assets/audio/blackLivesMatter.mp3"
+    },
+    {
+      "id": 2,
+      "name": "Deixa acontecer",
+      "artist": "Grupo revelação",
+      "path": "../../assets/audio/deixaAcontecer.mp3"
+    },
+    {
+      "id": 3,
+      "name": "Sua mãe vai me amar",
+      "artist": "Turma do Pagode",
+      "path": "../../assets/audio/suaMaeVaiMeAmar.mp3"
+    },
+    {
+      "id": 4,
+      "name": "Maquina do tempo",
+      "artist": "Matuê",
+      "path": "../../assets/audio/maquinaDoTempo.mp3"
+    },
+    {
+      "id": 5,
+      "name": "É sal",
+      "artist": "Matuê",
+      "path": "../../assets/audio/eSal.mp3"
+    },
+    {
+      "id": 6,
+      "name": "Cachorro caramelo",
+      "artist": "Lil Whind",
+      "path": "../../assets/audio/cachorroCaramelo.mp3"
+    },
+    {
+      "id": 7,
+      "name": "Oh Juliana",
+      "artist": "Niack",
+      "path": "../../assets/audio/ohJuliana.mp3"
+    },
+    {
+      "id": 8,
+      "name": "Comprei um Lança",
+      "artist": "Mc Jacaré",
+      "path": "../../assets/audio/compreiUmLanca.mp3"
+    }
+  ]
+}

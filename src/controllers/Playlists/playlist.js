@@ -69,7 +69,6 @@ playlists = [
 
 function getPlaylists(req, res) {
     try {
-        // console.log(getPersonalPlaylists(req, res))
         return res.status(200).send(playlists)
     } catch (err) {
         console.error(err)

@@ -24,8 +24,6 @@ async function register(req, res) {
 async function getUsers(req, res) {
     try {
         return await res.status(200).send(users)
-        if(users = [])
-        console.log('vazio')
     } catch (err) {
         console.error(err)
         return {error: err}
@@ -46,15 +44,7 @@ async function updateUsers(req, res) {
     } catch(err) {
         console.log(err);
         return res.status(304)
-
     }
-}
-
-
-
-
-function checkEmails(arrayOfUsers, email) {
-
 }
 
 module.exports = {

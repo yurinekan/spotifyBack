@@ -26,7 +26,6 @@ async function getUsers(req, res) {
         return await res.status(200).send(users)
         if(users = [])
         console.log('vazio')
-        
     } catch (err) {
         console.error(err)
         return {error: err}
@@ -34,14 +33,16 @@ async function getUsers(req, res) {
 }
 
 async function updateUsers(req, res) {
-    const { id, nick, birthdate} = req.body
+    const { id, email, password, nick, birthdate } = req.body
     try {
-
         users[id] = {
+            id,
+            email,
+            password,
             nick,
             birthdate
         }
-        return res.status(200).send(user(id))
+        return res.status(200).send(users[id])
     } catch(err) {
         console.log(err);
         return res.status(304)

@@ -23,50 +23,42 @@ async function register(req, res) {
 
 async function getUsers(req, res) {
     try {
-        return await res.status(201).send(users)
+        return await res.status(200).send(users)
+        if(users = [])
+        console.log('vazio')
+        
     } catch (err) {
         console.error(err)
         return {error: err}
     }
 }
 
-async function updateStudent(req, res) {
+async function updateUsers(req, res) {
+    const { id, nick, birthdate} = req.body
+    try {
 
+        users[id] = {
+            nick,
+            birthdate
+        }
+        return res.status(200).send(user(id))
+    } catch(err) {
+        console.log(err);
+        return res.status(304)
+
+    }
 }
 
+
+
+
+function checkEmails(arrayOfUsers, email) {
+
+}
 
 module.exports = {
     //
     register,
-    getUsers
+    getUsers,
+    updateUsers
 }
-
-
-// id = 0;
-// users = [];
-// async function register(req, res) {
-//     const { email, password, nick, birthdate } = req.body
-//     users.push(
-//         {
-//             id,
-//             email,
-//             password,
-//             nick,
-//             birthdate
-//         }
-//         )
-
-//     id++
-
-//     console.log(users)
-//     return users
-// }
-
-// oi = {
-//     body: {
-//         email: 'yurisada@a.com',
-//         password: 'oioioi',
-//         nick: 'Alore',
-//         birthdate: Date()
-//     }
-// }

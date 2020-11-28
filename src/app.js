@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { register, getUsers } = require('./controllers/Users/user');
+const { register, getUsers, updateUsers } = require('./controllers/Users/user');
 
 const app = express();
 app.use(cors());
@@ -20,7 +20,10 @@ app.get('/user/list', (req, res) => {
     return getUsers(req, res);
 })
 
-
+app.put('/user/update', (req, res) => {
+    console.log('Updated user');
+    return updateUsers(req, res);
+})
 
 
 

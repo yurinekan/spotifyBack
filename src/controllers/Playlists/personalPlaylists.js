@@ -1,3 +1,4 @@
+//CRUD Personal Playlists
 id = 0;
 personalPlaylists = [
     {
@@ -24,30 +25,7 @@ personalPlaylists = [
         "user_id": 2,
         "id": 1
       },
-      {
-        "name": "Pipoca",
-        "description": "Playlist de funk",
-        "color": "#ff0000",
-        "music_ids": [
-          4,
-          8,
-          3
-        ],
-        "user_id": 2,
-        "id": 1
-      },
-      {
-        "name": "Pipoca",
-        "description": "Playlist de funk",
-        "color": "#ff0000",
-        "music_ids": [
-          4,
-          8,
-          3
-        ],
-        "user_id": 2,
-        "id": 1
-      }
+      
 ]
 
 function createPlaylist(req, res) {
@@ -91,15 +69,29 @@ function getPersonalPlaylists(req, res) {
     }
 }
 
-function editPersonalPlaylists(req, res) {
-    const { name, description, color, music_ids, user_id } = req.body;
+function editPersonalPlaylists(req, res) {  
+    const { name, description, color, music_ids, user_id, id } = req.body;
     try {
-        return res.status(200).send(personalPlaylists)
+        personalPlaylists[id] = {
+            name,
+            description,
+            color,
+            music_ids,
+            user_id,
+            id
+        }
+
+        var arrByID = personalPlaylists.filter((playlist) => {
+            return playlist.user_id == user_id && playlist.id == id;
+        });
+
+        return res.status(200).send(arrByID)
     } catch (err) {
         console.error(err)
         return {error: err}
     }
 }
+
 module.exports = {
     //
     getPersonalPlaylists,

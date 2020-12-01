@@ -1,11 +1,11 @@
 const express = require('express')
-const { register, getUsers, updateUsers } = require('../controllers/Users/user')
+const { registerUser, getUsers, updateUsers, loginUser } = require('../controllers/Users/user')
 
 const app = express.Router()
 
 app.post('/register', (req, res) => {
     console.log('User created!')
-    return register(req, res);
+    return registerUser(req, res);
 })
 
 app.get('/list', (req, res) => {
@@ -16,6 +16,11 @@ app.get('/list', (req, res) => {
 app.put('/update', (req, res) => {
     console.log('Updated user');
     return updateUsers(req, res);
+})
+
+app.post('/login', (req, res) => {
+    console.log('Login succeed')
+    return loginUser(req, res)
 })
 
 module.exports = app

@@ -2,7 +2,7 @@
 id = 0;
 users = [];
 
-async function register(req, res) {
+async function registerUser(req, res) {
     const { email, password, nick, birthdate } = req.body
     try {
         newUser = {
@@ -47,9 +47,22 @@ async function updateUsers(req, res) {
     }
 }
 
+async function loginUser(req, res) {
+    const { email, password } = req.body
+    try {
+        var userByCred = users.filter((user) => {
+            return user.email == email && user.password == password;
+        });
+        return res.status(200).send(userByCred);
+    } catch(err) {
+        return res.status(404)
+    }
+}
+
 module.exports = {
     //
-    register,
+    registerUser,
     getUsers,
-    updateUsers
+    updateUsers,
+    loginUser,
 }

@@ -48,3 +48,17 @@ musics = [
         "path": "../../assets/audio/compreiUmLanca.mp3"
       }
 ]
+
+function getMusics(req, res) {
+  try {
+      return res.status(200).send(musics)
+  } catch (err) {
+      console.error(err)
+      return {error: err}
+  }
+}
+
+module.exports = {
+  //
+  getMusics
+}

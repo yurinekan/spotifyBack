@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-// const { getPersonalPlaylists, createPlaylist } = require('./controllers/Playlists/personalPlaylists');
 const { getPlaylists } = require('./controllers/Playlists/playlist');
 
 const app = express();
@@ -12,6 +11,10 @@ app.use('/user', users)
 
 const personalPlaylist = require('./Routes/personalPlaylists');
 app.use('/personalPlaylist', personalPlaylist)
+
+const musics = require('./Routes/musics');
+app.use('/music', musics)
+
 
 app.get('/playlist/list', (req, res) => {
     console.log('Listed playlists')

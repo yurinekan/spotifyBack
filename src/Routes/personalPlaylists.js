@@ -1,5 +1,5 @@
 const express = require('express')
-const { getPersonalPlaylists, createPlaylist } = require('../controllers/Playlists/personalPlaylists')
+const { getPersonalPlaylists, createPlaylist, editPersonalPlaylists } = require('../controllers/Playlists/personalPlaylists')
 const app = express.Router()
 
 app.post('/register', (req, res) => {
@@ -14,7 +14,7 @@ app.get('/list', (req, res) => {
 
 app.put('/update', (req, res) => {
     console.log('Listed personal playlists')
-    return getPersonalPlaylists(req, res);
+    return editPersonalPlaylists(req, res);
 })
 
 module.exports = app

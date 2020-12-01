@@ -16,15 +16,13 @@ const musics = require('./Routes/musics');
 app.use('/music', musics)
 
 
+
+
+
 app.get('/playlist/list', (req, res) => {
     console.log('Listed playlists')
     return getPlaylists(req, res);
 })
-
-
-
-
-
 
 console.log('Server started')
 app.listen(3000);

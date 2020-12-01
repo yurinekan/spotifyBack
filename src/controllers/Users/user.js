@@ -30,6 +30,7 @@ async function getUsers(req, res) {
     }
 }
 
+//id na url - att
 async function updateUsers(req, res) {
     const { id, email, password, nick, birthdate } = req.body
     try {
